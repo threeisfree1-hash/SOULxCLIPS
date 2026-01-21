@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SOULxCLIPS • Star 4k Live</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* BOX */
+.box {
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 360px;
+  box-shadow: 0 0 25px rgba(0,255,204,0.2);
+}
+
+h1 {
+  margin-top: 0;
+  color: #00ffcc;
+  font-size: 26px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.join {
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
+}
+
+.joined {
+  background: #1f2937;
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>SOULxCLIPS LIVE</h1>
+  <p> Join SOULxCLIPS For Live Match Links & More...</p>
+
+  <button class="btn join" onclick="joinNow()">Join Now</button>
+  <button class="btn joined" onclick="alreadyJoined()">Already Joined</button>
+
+<script>
+const STREAM_URL = "https://cricloungelive.short.gy/livepakistanteam/star4k.m3u8";
+const TG_URL = "https://t.me/soulxclips";
+
+function joinNow() {
+  window.open(TG_URL, "_blank");
+  redirect();
+}
+
+function alreadyJoined() {
+  redirect();
+}
+
+function redirect() {
+  setTimeout(() => {
+    window.location.href = STREAM_URL;
+  }, 500);
+}
+
+// Auto redirect after 5 seconds
+setTimeout(redirect, 5000);
+</script>
+
+</body>
+</html>
